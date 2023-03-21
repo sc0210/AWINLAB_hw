@@ -11,13 +11,14 @@
 
 ## MY SOLUTION (last updated: 3/21)
 
-- Snapshot of the model
+- **prediction result**
 
-<img src="./output/cnn_model.png" width="50%">
+![image alt](./output/cnn_pred_result.png)
+
 
 <!-- ![image alt](./output/cnn_model.png) -->
 
-- Performance
+- **Performance**
 
 ||precision|recall|f1-score|support|
 |----|----|----|----|----|
@@ -33,5 +34,9 @@
 - Confusion matrix 
 ![image alt](./output/result_accuracy_loss.png)
 
-- Prediction result 
+- **Prediction result**
 ![image alt](./output/confusion_matrix.png)
+
+- **Snapshot of the model**
+
+<img src="./output/cnn_model.png" width="20%" hight="50%">
