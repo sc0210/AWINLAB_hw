@@ -1,3 +1,3 @@
 *.ipynb_checkpoints
 datasets/
-split_dataset/
+split_datasets/
