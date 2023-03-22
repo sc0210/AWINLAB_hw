@@ -1,11 +1,11 @@
               precision    recall  f1-score   support
 
-       daisy       0.89      0.86      0.88       147
-   dendelion       0.90      0.86      0.88       200
-        rose       0.77      0.75      0.76       151
-   sunflower       0.75      0.94      0.84       140
-       tulip       0.82      0.74      0.78       192
+       daisy       0.84      0.92      0.88       147
+   dendelion       0.90      0.91      0.90       200
+        rose       0.79      0.87      0.83       151
+   sunflower       0.84      0.94      0.89       140
+       tulip       0.90      0.68      0.78       192
 
-    accuracy                           0.83       830
-   macro avg       0.83      0.83      0.83       830
-weighted avg       0.83      0.83      0.83       830
+    accuracy                           0.86       830
+   macro avg       0.85      0.86      0.85       830
+weighted avg       0.86      0.86      0.85       830

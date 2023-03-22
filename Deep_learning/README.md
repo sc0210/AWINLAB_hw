@@ -44,4 +44,4 @@
 
 - **Snapshot of the model**
 
-<img src="./output/cnn_model.png" width="100%">
+<img src="./output/cnn_model.png" width="200%">
