@@ -2,12 +2,12 @@
 
 ## **Description**
 
-- Classification problem
-- [Flower datasets](https://www.kaggle.com/alxmamaev/flowers-recognition) (5 classes)
-
 1. Setup model via `KERAS` methods
 2. Deep learning model option:  DNN(Deep neural network)  or CNN(convolution neural network)
-3. After training, show performance & list the comparsion of 10 prediction versus groundtruth.
+3. Evaluate performance & compare 10 prediction results.
+
+- Classification problem
+- [***Flower datasets (5 classes)***](https://www.kaggle.com/alxmamaev/flowers-recognition)
 
 ----
 
