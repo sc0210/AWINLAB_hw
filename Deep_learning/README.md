@@ -3,11 +3,11 @@
 ## **Description**
 
 1. Setup model via `KERAS` methods
-2. Deep learning model option:  DNN(Deep neural network)  or CNN(convolution neural network)
+2. Deep learning model option:  DNN(Deep neural network)  or `CNN(convolution neural network)`
 3. Evaluate performance & compare 10 prediction results.
 
 - Classification problem
-- [***Flower datasets (5 classes)***](https://www.kaggle.com/alxmamaev/flowers-recognition)
+- [`Flower datasets (5 classes)`](https://www.kaggle.com/alxmamaev/flowers-recognition)
 
 ----
 

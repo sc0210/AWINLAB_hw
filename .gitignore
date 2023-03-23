@@ -1,3 +1,4 @@
+.gitignore
 *.ipynb_checkpoints
 datasets/
 split_datasets/
