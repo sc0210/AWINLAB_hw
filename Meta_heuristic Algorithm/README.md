@@ -20,8 +20,8 @@
 
 ### After 500 iterations convergence
 
-<img src="./01_knapsack_HC.png" width="100%">
-<img src="./01_knapsack_SA.png" width="100%">
+<img src="./output/01_knapsack_HC.png" width="100%">
+<img src="./output/01_knapsack_SA.png" width="100%">
 
 ---
 
