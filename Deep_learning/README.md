@@ -63,7 +63,3 @@
         <img src="./output/confusion_matrix.png" width="100%">
 
 4. Conclusion
-
-    From this training result, I learned that the classification is great
-
-    But 
