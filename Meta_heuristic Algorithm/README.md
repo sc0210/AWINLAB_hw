@@ -64,11 +64,25 @@
 
     2. Steps to follow
 
-        - 1.Initialization: Start with a random solution where each item is either in the knapsack or not. For example, [1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1].
-        - 2.Evaluation: Calculate the value of the current solution. In this case, the total weight of the selected items is 750, and the total profit is 2842.
-        - 3.Neighbor Generation: Generate a set of neighboring solutions by flipping the inclusion status of one item in the current solution. For example, [0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1].
-        - Selection: Select the neighbor with the highest value. In this case, we evaluate the value of the new solution by calculating the total weight and profit, and select the neighbor with the highest profit.
-        - 5.Termination: If the selected neighbor has a higher value than the current solution, set it as the new current solution and go back to step 2. If no neighbor has a higher value, terminate and return the current solution.
+        - 1.Initialization:
+
+            Start with a random solution where each item is either in the knapsack or not. For example, [1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1].
+
+        - 2.Evaluation:
+
+            Calculate the value of the current solution. In this case, the total weight of the selected items is 750, and the total profit is 2842.
+
+        - 3.Neighbor Generation:
+
+            Generate a set of neighboring solutions by flipping the inclusion status of one item in the current solution. For example, [0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1].
+
+        - Selection:
+
+            Select the neighbor with the highest value. In this case, we evaluate the value of the new solution by calculating the total weight and profit, and select the neighbor with the highest profit.
+
+        - 5.Termination:
+             If the selected neighbor has a higher value than the current solution, set it as the new current solution and go back to step 2. If no neighbor has a higher value, terminate and return the current solution.
+
         - 6.Repeat steps 2-5 until a good solution is found or a maximum number of iterations is reached.
 
     3. Main functions to implement HC algo.
@@ -89,7 +103,7 @@
 
             In the 0/1 knapsack problem, a simple neighborhood structure is to **flip a single bit (item)** in the candidate solution. Thus, each neighbor of the current solution can be obtained by flipping a single bit.
 
-    4. **Result**
+    4. **Result showcase (converge to 1458)**
 
         <img src="./output/01_knapsack_HC.png" width="80%">
 
@@ -97,43 +111,46 @@
 
     1. Simulated annealing is a technique for minimizing functions that makes use of the ideas from Markov chain Monte Carlo samplers. [Reference](https://bookdown.org/rdpeng/advstatcomp/simulated-annealing.html)
 
-        <img src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*WnBJxCX9FBYAhnHl5OfJhg.png" width="80%">
-
     2. Steps to follow:
-        - 1.Initialization: Start with a random solution where each item is either in the knapsack or not.
-        - 2.Evaluation: Calculate the value of the current solution.
-        - 3.Neighbor Generation: Generate a set of neighboring solutions by flipping the inclusion status of one item in the current solution.
+        - 1.Initialization:
+
+            Start with a random solution where each item is either in the knapsack or not.
+        - 2.Evaluation:
+
+            Calculate the value of the current solution.
+
+        - 3.Neighbor Generation:
+
+            Generate a set of neighboring solutions by flipping the inclusion status of one item in the current solution.
+
         - 4.Selection: Select a neighbor solution randomly.
-        - 5.**Acceptance Probability**: Calculate the acceptance probability of the selected neighbor solution using the current temperature and the difference in value between the current and neighbor solutions.
+        - 5.**Acceptance Probability**:
 
-            The acceptance probability is given by the Boltzmann distribution: exp(-delta/T), where delta is the difference in value between the current and neighbor solutions, and T is the current temperature.
-        - 6.Termination: If the selected neighbor solution is better than the current solution, set it as the new current solution.
+            Calculate the acceptance probability of the selected neighbor solution using the current temperature and the difference in value between the current and neighbor solutions.
 
-            If the selected neighbor solution is worse than the current solution, accept it with a probability calculated in step 5. Update the temperature according to a cooling schedule, which reduces the temperature over time.
+            The acceptance probability is given by the **Boltzmann distribution: exp(-delta/T)**, where delta is the difference in value between the current and neighbor solutions, and T is the current temperature.
+
+            <img src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*WnBJxCX9FBYAhnHl5OfJhg.png" width="80%">
+
+        - 6.Termination:
+
+            If the selected neighbor solution is better than the current solution, set it as the new current solution.If the selected neighbor solution is worse than the current solution, accept it with a probability calculated in step 5. Update the temperature according to a cooling schedule, which reduces the temperature over time.
 
             Repeat steps 2-6 until a good solution is found or a maximum number of iterations is reached.
         - Output: Return the best solution found.
 
     3. Main functions to implement SA algo.
 
-        - **Candidate Solution Representation**:
+        - Candidate Solution Representation, fitness function and neighborhood structure: same as hill climbing
+        - ``simulated_annealing(max_iterations, initial_temperature, cooling_rate)``
 
-            In the 0/1 knapsack problem, a candidate solution is a binary vector of length n, where each element corresponds to an item in the set, and its value indicates whether the item is selected (1) or not (0).
+            It start with a random initial solution and generate neighboring solutions by flipping one bit at a time. We then calculate the values of the current and neighbor solutions, and calculate the acceptance probability using the Boltzmann distribution.
 
-            (e.g. [0,1,0,1,0,0,0,1,1,1])
+            We decide whether to accept the neighbor solution based on this acceptance probability, and update the temperature according to a geometric cooling schedule.
 
-        - **Fitness Function**:
+            After the loop, we find the best solution by evaluating the current solution and printing the results. Note that the results may vary between runs due to the stochastic nature of the algorithm.
 
-            The fitness function evaluates the objective function of the candidate solution. In the 0/1 knapsack problem, the fitness function calculates the total value of the selected items in the candidate solution. 
-
-            If the total weight of the selected items exceeds the maximum weight capacity of the knapsack, the fitness function returns a penalty value (e.g., 0) to discourage such solutions.
-
-        - **Neighborhood Structure**:
-
-            The neighborhood structure defines the set of candidate solutions that are obtained by making small modifications to the current solution.
-
-            In the 0/1 knapsack problem, a simple neighborhood structure is to **flip a single bit (item)** in the candidate solution. Thus, each neighbor of the current solution can be obtained by flipping a single bit.
-    4. **Result**
+    4. **Result showcase (converge to 1458)**
 
         <img src="./output/01_knapsack_SA.png" width="80%">
 
