@@ -1,6 +1,6 @@
 # AWINLAB_hw Project guide
 
-***Author: SamChen 2023/03/27***
+***Author: SamChen 2023/03/25***
 
 > Quick guide for this project, each question organized in respectively folders. ``README.md`` in each folder demostrate workflow & result.
 
