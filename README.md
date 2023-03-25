@@ -36,7 +36,7 @@
 
 2. More details in [README.md](./Meta_heuristic%20Algorithm/README.md) in Meta-heursistic Algorithm folder
 
-3. Resut showcase (The global optimal selection (profit) for 0/1 knapsack problem is **1458**, under knapsack capacity 750)
+3. Resut showcase (The global optimal selection for 0/1 knapsack problem is **1458**, under knapsack capacity 750)
 
     <img src='./Meta_heuristic Algorithm/output/01_knapsack_combine.png' width='90%'> 
 
