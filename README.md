@@ -38,8 +38,6 @@
 
 3. Resut showcase (The global optimal selection (profit) for 0/1 knapsack problem is **1458**, under knapsack capacity 750)
 
-    <img src='./Meta_heuristic Algorithm/output/01_knapsack_HC.png' width='90%'> 
+    <img src='./Meta_heuristic Algorithm/output/01_knapsack_combine.png' width='90%'> 
 
-    <img src='./Meta_heuristic Algorithm/output/01_knapsack_SA.png' width='90%'> 
-
-> ***End of the quick guide of this project***
+> ***End of the quick guide***
