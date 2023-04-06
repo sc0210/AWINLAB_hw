@@ -1,4 +1,4 @@
-# **Question 2: deep learning**
+# **Question 2: Meta-heuristic algorithm**
 
 ***(last updated 3/25)***
 
