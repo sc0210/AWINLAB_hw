@@ -8,7 +8,7 @@
 
 ## Question 1: Deep learning
 
-1. Folder organization
+1. Directory organization
 
     - Project root folder: [Deep_learning](./Deep_learning/)
     <!-- - Dataset: [Deep_learning/datasets](./Deep_learning/datasets/)
@@ -28,7 +28,7 @@
 
 ## Quesiton 2: Meta-heuristic algorithm
 
-1. Folder organization
+1. Directory organization
 
     - Project root folder: [Meta_heuristic Algorithm](./Meta_heuristic%20Algorithm/)
     - Results storage: [Meta_heuristic Algorithm/output](./Meta_heuristic%20Algorithm/output/)
